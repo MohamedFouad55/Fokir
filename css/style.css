@@ -1,0 +1,986 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+a{
+    text-decoration: none;
+} 
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+/* ***************************************** */
+    /* the 3 lines Design */
+   
+.icon{
+    width: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.icon span{
+    background-color:#ff305b;
+    margin-bottom: 5px;
+}
+.icon span:first-child{
+    height: 1px;
+    width: 50%;
+}
+.icon span:nth-child(2){
+    height: 1px;
+    width: 100%;
+}
+.icon span:last-child{
+    height: 1px;
+    width: 50%;
+}
+/* ***************************************** */
+
+/* --------------- start Header and Nav bar ------------------------- */
+header{
+    padding: 18px 0;
+    background: #333;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* background-color: transparent; */
+}
+header .container nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+header .container nav .logo{
+    width: 25%;
+}
+header .container nav .logo a{
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff305b;
+}
+header .container nav .linkes{
+    width: 75%;
+    position: relative;
+}
+header .container nav ul{
+    display: flex;
+    align-items: center;
+    float: right;
+    list-style: none;
+}
+header .container nav ul li{
+    padding: 0 10px;
+}
+header .container nav ul li a{
+    font-size: 16px;
+    color: white;
+    transition: color 0.3s;
+}
+header .container nav ul li a:hover{
+    color: #ff305b;
+}
+/* --------------- End Header and Nav bar ------------------------- */
+/* ------------ start Main page (Home) ------------------------- */
+.mainpage{
+    /* position: absolute; */
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/header.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.mainpage .content1{
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.849);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.mainpage .content1 .content2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+.mainpage .content1 .content2 h3{
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+}
+.mainpage .content1 .content2 h1{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 70px;
+    color: #ff305b;
+    font-weight: bold;
+}
+.mainpage .content1 .content2 div{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.mainpage .content1 .content2 div h4{
+    padding-right: 8px;
+}
+/* Animation >>>>>>>>>>>>>> */
+.P_animation{
+    overflow: hidden;
+    border-right: 1px solid white;
+    white-space: nowrap;
+    width: 90.05px;
+    animation: WordAnimat 1.5s alternate-reverse ease-in-out infinite;
+    animation-delay: 1s;
+}
+@keyframes WordAnimat {
+    from{
+        width: 0;
+    }
+    to{
+        width: 90.05px;
+    }
+}
+@media (max-width:767px){
+    .mainpage .content1 .content2 h1{
+        font-size: 38px;
+    }
+    .mainpage .content1 .content2 h3{
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 22px;
+    }
+    .mainpage .content1 .content2 div{
+        font-size: 18px;
+    }
+}
+/* ------------ end main page (home) ----------------------------- */
+
+/* -------------------- Start Services ------------------ */
+.Services{
+    width: 100%;
+    background: #f1f1f1;
+    text-align: center;
+    padding: 15px 0;
+}
+.Services .container .Serv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.Services .container .Serv h2{
+    margin: 40px 0 5px 0;
+    padding: 40px 0 5px 0;
+    font-size: 36px;
+    color: #333333;
+}
+.Services .container .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(25%,1fr));
+    object-position: center;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.Services .container .content .card{
+    text-align: center;
+    transition: all 0.3s;
+    padding: 30px 10px;
+    margin: 40px 0;
+}
+.Services .container .content .card:hover{
+    background-color: white;
+    box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.131);
+}
+.Services .container .content .card h3{
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+.Services .container .content .card i{
+    color: #ff305b;
+    display: block;
+    font-size: 36px;
+    margin-bottom: 20px;
+    transition: transform 0.2s linear ;
+}
+.Services .container .content .card:hover i{
+    transform: scale(1.1);
+}
+.Services .container .content .card p{
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+@media (max-width:767px){
+    .Services{
+        padding: 40px 0;
+    }
+    .Services .container .Serv h2{
+        margin: 20px 0 5px 0;
+        padding: 20px 0 5px 0;
+        font-size: 30px;
+    }
+    .Services .container .content .card h3{
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .Services .container .content{
+        grid-template-columns: auto;
+        padding: 0 0;
+    }
+    .Services .container .content .card{
+        padding: 30px 40px;
+        margin: 5px 0;
+    }
+    .Services .container .content .card i{
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+}
+/* -------------------- end Services ------------------ */
+
+/* ---------- start Section (About) ------------------  */
+.AboutUs{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+.AboutUs .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AboutUs .container .imgabout{
+    position: relative;
+}
+.AboutUs .container .imgabout .image{
+    position: relative;
+}
+.AboutUs .container .imgabout .image .transion{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color:#333333ae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out; 
+    opacity: 0;
+}
+.AboutUs .container .imgabout .image:hover .transion {
+    height: 100%;
+    opacity: 1;
+}
+.imgabout .image .transion a{
+    margin: 10px;
+    font-size: 1.2em;
+    color: white;
+    transition: 0.3s;
+}
+.imgabout .image .transion a:hover{
+    color:#ff305b;
+}
+.AboutUs .container .imgabout::before{
+    content: '';
+    position: absolute;
+    border: #333333c7 7px solid;
+    width: 95%;
+    height: 95%;
+    z-index: -1;
+    top: -30px;
+    left: -30px;
+    border-radius: 5px;
+}
+.AboutUs .container .profileDesc{
+    padding: 0 0 0 70px;
+}
+.AboutUs .container .profileDesc h2{
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 25px;
+    padding-left: 13px;
+    position: relative;
+}
+.AboutUs .container .profileDesc h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -10%;
+    height: 110%;
+    width: 3px;
+    background-color: #ff305b;
+}
+.AboutUs .container .profileDesc p{
+    border-bottom: 1px dashed #999999;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    line-height: 1.6;
+    margin: 0 0 15px;
+    color: rgb(98, 98, 98);
+}
+.pro_Info ul a{
+    color: rgb(98, 98, 98);
+}
+.pro_Info ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    margin-bottom: 10px;
+    color: rgb(98, 98, 98);
+}
+.pro_Info ul span{
+    color: #333;
+    font-weight: 600;
+}
+.Download_CV{
+    margin-top: 60px;
+}
+.Download_CV a{
+    width: 50px;
+    background-color: #ff305b;
+    color: white;
+    padding: 18px;
+    margin: 0 8px;
+    border-radius: 8px;
+    transition: background-color 0.4s;
+}
+.Download_CV a:hover{
+    background-color: #ff0033;
+}
+@media (max-width:767px){
+    .AboutUs{
+        height: 155vh;
+        justify-content: center;
+    }
+    .AboutUs .container{
+        flex-direction: column;
+    }
+    .AboutUs .container .imgabout{
+        position: relative;
+        width: 95%;
+    }
+    .AboutUs .container .imgabout .image{
+        width: 100%;
+    }
+    .AboutUs .container .imgabout .image img{
+        width:100% ; 
+    }
+    .AboutUs .container .imgabout::before{
+        display: none;
+    }
+    .AboutUs .container .profileDesc{
+        padding: 25px 0 0 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .AboutUs .container .profileDesc h2{
+        font-size: 34px;
+        font-weight: 500;
+        line-height: 22px;
+        margin-bottom: 25px;
+        padding-left: 13px;
+        position: relative;
+    }
+    .AboutUs .container .profileDesc p{
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        line-height: 1.6;
+        margin: 0 0 15px;
+        
+    }
+    .pro_Info ul{
+        grid-template-columns: auto;
+        gap: 20px;
+        margin-bottom: 10px;
+    }
+    .Download_CV{
+        margin-top: 35px;
+    }
+    .Download_CV a{
+        width: 50px;
+        background-color: #ff305b;
+        color: white;
+        padding: 8px;
+        margin: 0 8px;
+        border-radius: 4px;
+        transition: background-color 0.4s;
+    }
+}
+/* ---------- End Section (About) ------------------  */
+
+/* ------------ Srart Our Portfolio Section ----------- */
+.Portfolio{
+    text-align: center;
+    width: 100%;
+    padding-bottom: 80px;
+}
+.Portfolio .container .portTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Portfolio .container .portTitle h2{
+    margin: 40px 0 5px 0;
+    padding: 40px 0 5px 0;
+    font-size: 36px;
+    color: #333333;
+}
+.Portfolio .container .Port_menu{
+    margin: 50px 0;
+}
+.Portfolio .container .Port_menu button{
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 3px 12px;
+    cursor: pointer;
+}
+.Portfolio .container .Port_menu .activ{ /* activ element */
+    color: #ff305b;
+}
+.Portfolio .container .Caards_Portfolio{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+.Portfolio .container .Caards_Portfolio .cradPort{
+    cursor: pointer;
+    position: relative;
+}
+.Portfolio .container .Caards_Portfolio .cradPort .Hov{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #33333388;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.4s;
+}
+.Portfolio .container .Caards_Portfolio .cradPort .Hov:hover{
+    opacity: 1;
+}
+.Portfolio .container .Caards_Portfolio .cradPort img{
+    width: 100%;
+}
+@media (max-width:767px){
+    .Portfolio .container .portTitle h2{
+        margin: 20px 0 5px 0;
+        padding: 20px 0 5px 0;
+        font-size: 30px;
+    }
+    .Portfolio .container .Port_menu button{
+        font-size: 16px;
+        font-weight: 400;
+        padding: 3px 8px;
+        line-height: 1.6;
+    }
+}
+/* ------------ End Our Portfolio Section ----------- */
+
+/* ------------ start counter section --------------- */
+.counter_section{
+    width: 100%;
+    padding: 30px 0;
+    background-color:#f1f1f1;
+}
+.counter_section .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(285px,1fr));
+    text-align: center;
+    object-position: center;
+}
+.counter_section .container .counter_ele{
+    padding: 30px 0;
+}
+.counter_section .container .counter_ele i{
+    padding: 10px 0;
+    color: #ff305b;
+    font-size: 26px;
+}
+.counter_section .container .counter_ele h3{
+    font-size: 26px;
+    color: #333;
+}
+.counter_section .container .counter_ele h5{
+    padding: 10px 0;
+    color: #555555;
+    font-size: 15px;
+}
+/* ------------ End counter section --------------- */
+
+/* ----------- start Client's Feedback -------------- */
+.Testimonial{
+    width: 100%;
+}
+.Testimonial .container .Client{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Testimonial .container .Client h2{
+    margin: 40px 0 5px 0;
+    padding: 40px 0 5px 0;
+    font-size: 36px;
+    color: #333333;
+}
+.Testimonial .container .card{
+    margin: 70px auto;
+    width: 70%;
+    display: flex;
+    padding: 35px;
+    background-color: #3333330f;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+}
+.Testimonial .container .image{
+    width:360px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.Testimonial .container .image img{
+    border-radius: 50%;
+    padding: 10px;
+    width: 100%;
+}
+.Testimonial .container .content{
+    padding-left: 30px;
+}
+.Testimonial .container .content h3{
+    font-size: 26px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.Testimonial .container .content h4{
+    margin-bottom: 15px;
+}
+.Testimonial .container .content h4 a{
+    color: #777777;
+    font-size: 15px;
+}
+.Testimonial .container .content p{
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: rgb(98, 98, 98);
+}
+.Testimonial .container .content .stars i{
+    color:#F1C30D ;
+    font-size: 16px;
+}
+/* ----- */
+.Testimonial .container .card::before{
+    content: '';
+    position: absolute;
+    background-color: #ff305b;
+    width: 150px;
+    height: 140%;
+    top: -110px;
+    left: -50px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+@media (max-width:767px){
+    .Testimonial .container .card::before{
+        top: -200px;
+        left: -150px;
+        transform: rotate(45deg);
+    }
+    .Testimonial{
+        padding: 40px 0;
+    }
+    .Testimonial .container .Client h2{
+        margin: 20px 0 5px 0;
+        padding: 20px 0 5px 0;
+        font-size: 30px;
+    }
+    .Testimonial .container .card{
+        margin: 40px auto;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .Testimonial .container .image{
+        width:100%;
+        padding: 20px;
+        text-align: center;
+    }
+    .Testimonial .container .image img{
+        text-align: center;
+        padding: 10px;
+        width: 55%;
+    }
+    .Testimonial .container .content{
+        padding-left: 15px;
+    }
+    .Testimonial .container .content h3{
+        font-size: 20px;
+    }
+}
+/* ---- */
+/* ----------- End Client's Feedback -------------- */
+
+/* ----------- start Our Blog -------------- */
+.Blog{
+    width: 100%;
+    background-color:#f1f1f1;
+    padding: 90px 0;
+}
+.Blog .container .BlogTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Blog .container .BlogTitle h2{
+    margin: 10px 0 5px 0;
+    padding: 20px 0 5px 0;
+    font-size: 36px;
+    color: #333333;
+}
+.Blog .container .cardBlog{
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    gap: 20px 30px;
+    object-position: center;
+}
+.Blog .container .cardBlog .card{
+    background-color: white;
+}
+.Blog .container .cardBlog .card .cardimg{
+    height: 195px;
+}
+.Blog .container .cardBlog .card img,
+.Blog .container .cardBlog .card iframe
+{
+    width: 100%;
+    height: 100%;
+}
+.Blog .container .cardBlog .card .CardContent{
+    padding: 20px;
+}
+.Blog .container .cardBlog .card .CardContent div{
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(98, 98, 98);
+    font-weight: 500;
+}
+.Blog .container .cardBlog .card .CardContent .a_title{
+    color: #333333;
+    font-size: 24px;
+    margin: 20px 0;
+    transition: color 0.5s;
+    font-weight: 500;
+}
+.Blog .container .cardBlog .card .CardContent p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(98, 98, 98);
+    padding: 10px 0;
+}
+.Blog .container .cardBlog .card .CardContent .a_Read{
+    font-size: 18px;
+    color: #333;
+    transition: color 0.5s;
+    text-transform: uppercase;
+} 
+.Blog .container .cardBlog .card .CardContent a:hover{
+    color: #ff305b;
+}
+@media (max-width:767px){
+    .Blog{
+        padding: 10px 0;
+    }
+    .Blog .container .BlogTitle h2{
+        margin: 20px 0 5px 0;
+        padding: 20px 0 5px 0;
+        font-size: 30px;
+    }
+    .Blog .container .cardBlog{
+        margin: 45px 0;
+        grid-template-columns: auto;
+        gap: 30px;
+    }
+    .Blog .container .cardBlog .card .CardContent .a_title{
+        font-size: 22px;
+    }
+    .Blog .container .cardBlog .card .CardContent .a_Read{
+        font-size: 15px;
+    }
+}
+/* ----------- End Our Blog -------------- */
+
+/* ----------- start Contact us section ---------- */
+.Contact_us{
+    width: 100%;
+    padding: 70px 0;
+}
+.Contact_us .container .ContactTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Contact_us .container .ContactTitle h2{
+    margin: 10px 0 5px 0;
+    padding: 20px 0 5px 0;
+    font-size: 36px;
+    color: #333333;
+}
+.Contact_us .container{
+    text-align: center;
+} 
+.Contact_us .container .form{
+    padding: 30px 0;
+    width: 75%;
+    margin: 0 auto;
+}
+.Contact_us .container .form input{
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    outline: none;
+    border-color: #7777779b;
+    padding: 12px;
+    font-size: 18px;
+}
+.Contact_us .container .form input:focus,
+.Contact_us .container .form .Info3 textarea:focus
+{
+    border-color: #ff305b;
+}
+.Contact_us .container .form .Info1 input{
+    width: 40%;
+    margin: 30px 10px;
+}
+.Contact_us .container .form .Info2 input{
+    margin: 0 auto;
+    width: 83%;
+    margin-bottom: 30px;
+}
+.Contact_us .container .form .Info3 textarea{
+    margin: 0 auto;
+    width: 83%;
+    padding: 8px;
+    margin-bottom: 20px;
+    height: 85px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    outline: none;
+    border-color: #7777779b;
+    font-size: 18px;
+}
+.Contact_us .container .form .btn_submit{
+    text-align: left;
+}
+.Contact_us .container .form .btn_submit input{
+    color: white;
+    background-color: #ff305b;
+    border: none;
+    margin-left: 73px;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    transition: background-color 0.5s;
+}
+.Contact_us .container .form .btn_submit input:hover{
+    background-color: rgb(226, 0, 0);
+}
+@media (max-width:767px){
+    .Contact_us{
+        padding: 30px 0;
+    }
+    .Contact_us .container .ContactTitle h2{
+        margin: 20px 0 5px 0;
+        padding: 20px 0 5px 0;
+        font-size: 30px;
+    }
+    .Contact_us .container .form{
+        padding: 30px 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .Contact_us .container .form .Info1 input{
+        width: 100%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .Contact_us .container .form .Info2 input{
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 20px auto;
+    }
+    .Contact_us .container .form .Info3 textarea{
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .Contact_us .container .form .btn_submit input{
+        margin-left: 7px;
+        font-size: 13px;
+        padding: 12px;
+        border-radius: 4px;
+    }
+}
+/* -------------- End Contact us Section ---------------- */
+
+/* ---------------- start footer ---------------- */
+footer{
+    background: #333333;
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+footer a{
+    padding: 0 10px;
+    color: white;
+    transition: color 0.5s;
+}
+footer p{
+    padding-top: 15px;
+}
+footer p a{
+    color: #ff305b;
+    padding: 3px 5px;
+}
+footer p a:hover{
+    border-bottom: 1px solid #ff305b;
+}
+footer a:hover{
+    color: #ff305b;
+}
+@media (max-width:767px){
+    footer{
+        padding: 30px 0;
+    }
+    footer a{
+        padding: 0 10px;
+    }
+    footer p{
+        padding-top: 20px;
+        font-size: 14px;
+    }
+    footer p a{
+        padding: 3px 5px;
+    }
+}
+/* ---------------- End footer ---------------- */
+
+/* --------------- start menue Links ----------------- */
+#MENUEBAR{/* Icon */
+    color: white;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 1.5em;
+    display: none;
+    transition: color 0.6s;
+}
+#MENUEBAR:hover {
+    color: #ff305b;
+}
+.menulinks{
+    position: absolute;
+    bottom: -319px;
+    width: 100%;
+    display: none;
+    background-color: #333;
+    color: white;
+    transform: translateY(-350px);
+    transition: transform 0.5s ease-in-out ;
+    z-index: -3;
+}
+#MENUEBAR:hover + .menulinks{
+    transform: translateY(0px);
+}
+header .container nav .menulinks ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+header .container nav .menulinks ul li {
+    padding: 12px 0;
+}
+header .container nav .menulinks ul li a{
+    font-size: 16px;
+    color: #d8d8d8;
+    transition: color 0.3s;
+}
+header .container nav .menulinks ul li a:hover{
+    color: #ff305b;
+}
+@media (max-width:767px) {
+    #MENUEBAR{
+        display: block;
+    }
+    header .container nav .linkes ul{
+        display: none;
+    }
+    header .container nav .menulinks{
+        display: block;
+    }
+}
+/* --------------- End menue Links ----------------- */
+
+/* --------------------------
+   ---- End Of Project ------
+   --------------------------
+*/
+
+
